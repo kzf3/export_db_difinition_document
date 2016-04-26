@@ -1,6 +1,7 @@
 require "bundler"
 require "date"
 require "./const.rb"
+require "./config.rb"
 Bundler.require
 
 client = Mysql2::Client.new(
