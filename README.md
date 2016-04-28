@@ -1,4 +1,4 @@
-## MySQLからデータベース定義書の作成
+## Convert MySQL Database to Microsoft Excel
 
 ## Usage
 
@@ -29,8 +29,16 @@ $database = {
 
 run! 
 
-Specify FILE_NAME is without extension
 
 ```
 ruby export.rb {FILE_NAME}
+```
+
+Specify FILE_NAME is without extension
+
+
+if outpu except curent directory.
+
+```
+ruby export.rb /tmp/{FILE_NAME}
 ```
