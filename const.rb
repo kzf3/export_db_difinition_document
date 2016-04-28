@@ -1,0 +1,6 @@
+SYSTEM_NAME = "システム名"
+SCHEMA_NAME = "スキーマ名"
+CREATE_USER = "作成者"
+CREATE_DATE = "作成日"
+MODIFIED_USER = "更新者"
+MODIFIED_DATE = "更新日"
