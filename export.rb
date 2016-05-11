@@ -29,9 +29,9 @@ class Export
 
   def set_table_list()
     @wb.styles do |s|
-      grey_cell = s.add_style :bg_color => "e6e6e6", :border => {:style => :thin, :color => "00"}, :alignment => {:horizontal => :center}
-      normal_cell = s.add_style :bg_color => false, :border => {:style => :thin, :color => "00"}
-      cell = s.add_style :bg_color => false
+      grey_cell    = s.add_style :bg_color => "e6e6e6", :border => {:style => :thin, :color => "00"}, :alignment => {:horizontal => :center}
+      normal_cell  = s.add_style :bg_color => false, :border => {:style => :thin, :color => "00"}
+      cell         = s.add_style :bg_color => false
       header_style = [grey_cell, grey_cell, grey_cell, grey_cell, grey_cell]
 
       @wb.add_worksheet(:name => 'テーブル一覧') do |sheet|
@@ -41,7 +41,7 @@ class Export
         count = 0
         all_tables.each do |res|
           table = res["Tables_in_portweb"]
-          sheet.add_row [count+=1, "", table, "", ""], :style => [normal_cell, normal_cell, normal_cell, normal_cell, normal_cell]
+          sheet.add_row [count+=1, "", "=HYPERLINK(\"#" + table + "!A1\", \"" + table + "\")", "", ""], :style => [normal_cell, normal_cell, normal_cell, normal_cell, normal_cell]
         end
       end
     end
